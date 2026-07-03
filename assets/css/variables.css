@@ -1,0 +1,48 @@
+/* Color Palette Variables based on Branding */
+:root {
+  --color-lavender: #6C63FF;
+  --color-light-lavender: #EDE9FE;
+  --color-navy: #1A2A4D;
+  --color-light-navy: #E6E9F6;
+  --color-text: #333333;
+  --color-white: #FFFFFF;
+  --color-background: #FAFAFA;
+
+  /* Typography Variables */
+  --font-family-primary: 'Inter', sans-serif; /* Body Text */
+  --font-family-secondary: 'Lora', serif;   /* Headings & Logo */
+  
+  /* Font Sizes - Mobile First (Base) */
+  --fs-xs: 0.75rem;     /* 12px */
+  --fs-sm: 0.875rem;    /* 14px */
+  --fs-base: 1rem;      /* 16px */
+  --fs-lg: 1.125rem;    /* 18px */
+  --fs-xl: 1.25rem;     /* 20px */
+  --fs-2xl: 1.5rem;     /* 24px */
+  --fs-3xl: 2rem;       /* 32px */
+  --fs-4xl: 2.5rem;     /* 40px */
+}
+
+/* Responsive Typography - Tablet */
+@media screen and (min-width: 768px) {
+  :root {
+    --fs-base: 1.0625rem; /* 17px */
+    --fs-lg: 1.25rem;     /* 20px */
+    --fs-xl: 1.5rem;      /* 24px */
+    --fs-2xl: 1.75rem;    /* 28px */
+    --fs-3xl: 2.5rem;     /* 40px */
+    --fs-4xl: 3.25rem;    /* 52px */
+  }
+}
+
+/* Responsive Typography - Desktop */
+@media screen and (min-width: 1024px) {
+  :root {
+    --fs-base: 1.125rem;  /* 18px */
+    --fs-lg: 1.375rem;    /* 22px */
+    --fs-xl: 1.75rem;     /* 28px */
+    --fs-2xl: 2rem;       /* 32px */
+    --fs-3xl: 3rem;       /* 48px */
+    --fs-4xl: 4rem;       /* 64px */
+  }
+}
