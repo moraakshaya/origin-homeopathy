@@ -1900,7 +1900,7 @@
 
 .testimonial-title {
     font-family: var(--font-family-secondary);
-    font-size: clamp(2rem, 3vw, 3rem);
+    font-size: clamp(1.5rem, 3.5vw, 3rem);
     color: var(--color-navy);
     font-weight: 700;
     line-height: 1.15;
@@ -1908,7 +1908,7 @@
 }
 
 .testimonial-subtitle {
-    font-size: 1.05rem;
+    font-size: 1rem;
     color: var(--color-text);
     /* margin-bottom: 3rem; */
     line-height: 1.6;
@@ -2088,14 +2088,21 @@
 
     .testimonial-title {
         text-align: center;
+
     }
 
     .testimonial-subtitle {
         text-align: center;
+        font-size: 0.8rem;
     }
 
     .testimonial-footer {
         align-items: center;
+    }
+
+    .testimonial-footer p {
+        text-align: center;
+        font-size: 0.8rem;
     }
 }
 
