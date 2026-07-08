@@ -767,7 +767,7 @@
 
 .why-heading {
     text-align: center;
-    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    font-size: clamp(1.5rem, 3.5vw, 3.2rem);
     line-height: 1.15;
     margin-bottom: 1rem;
     font-weight: 700;
@@ -945,6 +945,12 @@
     width: 20px;
     background-color: var(--color-lavender);
     margin: auto 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .why-footer p {
+        font-size: 0.8rem;
+    }
 }
 
 /* Desktop Layout */
@@ -1179,7 +1185,7 @@
 }
 
 .treatments-title {
-    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    font-size: clamp(1.5rem, 3.5vw, 3.2rem);
     line-height: 1.15;
     margin-bottom: 1rem;
     font-weight: 700;
@@ -1215,6 +1221,12 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .treatments-subtitle {
+        font-size: 0.8rem;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -1360,14 +1372,14 @@
 }
 
 .doctors-banner h2 {
-    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-size: clamp(1.5rem, 3.5vw, 3rem);
     color: var(--color-navy);
     font-weight: 700;
     margin-bottom: 1.5rem;
 }
 
 .doctors-banner p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--color-text);
     max-width: 700px;
     margin: 0 auto;
@@ -1404,6 +1416,12 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
     flex: 1;
+}
+
+@media (max-width: 768px) {
+    .doctors-banner p {
+        font-size: 0.8rem;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -1706,7 +1724,7 @@
 
 .process-title {
     font-family: var(--font-family-secondary);
-    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-size: clamp(1.5rem, 3.5vw, 3.2rem);
     color: var(--color-navy);
     font-weight: 700;
     line-height: 1.15;
@@ -1721,7 +1739,7 @@
 }
 
 .process-subtitle {
-    font-size: 1.05rem;
+    font-size: 1rem;
     color: var(--color-text);
     line-height: 1.6;
     margin-bottom: 2.5rem;
@@ -1801,6 +1819,41 @@
     color: var(--color-text);
     line-height: 1.5;
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    .process-badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .process-title {
+        text-align: center;
+    }
+
+    .process-subtitle {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .step-content h4 {
+        font-size: 1rem;
+    }
+
+    .process-bottom-note p {
+        font-size: 0.8rem;
+    }
+
+    .p-feature-text p {
+        font-size: 0.8rem;
+    }
+
+    .title-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 /* =========================================
@@ -2021,9 +2074,28 @@
 }
 
 @media (max-width: 768px) {
+    .testimonial-badge {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .testimonial-actions {
         flex-direction: column;
         width: 100%;
+    }
+
+    .testimonial-title {
+        text-align: center;
+    }
+
+    .testimonial-subtitle {
+        text-align: center;
+    }
+
+    .testimonial-footer {
+        align-items: center;
     }
 }
 

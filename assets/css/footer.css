@@ -512,8 +512,20 @@
     text-align: center;
   }
 
+  .cta-main-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-bottom-row p {
+    font-size: 0.8rem;
+  }
+
   .footer-cta-container {
     top: -298px;
     padding: 0 0rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.7rem;
   }
 }
