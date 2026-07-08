@@ -528,4 +528,16 @@
   .footer-bottom {
     font-size: 0.7rem;
   }
+
+  .footer-content {
+    gap: 1rem;
+  }
+
+  .footer-heading {
+    font-size: 0.9rem;
+  }
+
+  .footer-col a {
+    font-size: 0.8rem;
+  }
 }
