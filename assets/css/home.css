@@ -627,7 +627,7 @@
 }
 
 .about-heading {
-    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    font-size: clamp(1.5rem, 3.5vw, 3.2rem);
     line-height: 1.15;
     margin-bottom: 1rem;
     font-weight: 700;
@@ -663,6 +663,17 @@
     color: var(--color-text);
     line-height: 1.7;
     margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .about-heading {
+        text-align: center;
+    }
+
+    .about-text {
+        font-size: 0.8rem;
+        text-align: center;
+    }
 }
 
 /* Features Row */
