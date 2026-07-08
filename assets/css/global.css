@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto+Slab:wght@300;400;500;600;700&display=swap');
 @import url('./variables.css');
 
 /* Global Reset & Base Styles */
@@ -28,6 +28,20 @@ h1, h2, h3, h4, h5, h6 {
 .text-lavender { color: var(--color-lavender); }
 .text-navy { color: var(--color-navy); }
 .text-main { color: var(--color-text); }
+
+/* Sticky Header */
+.sticky-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+}
+
+/* Ensure sticky positioning isn't broken by body overflow overrides */
+html, body {
+  overflow-x: clip; /* clip prevents horizontal scroll without breaking sticky in modern browsers */
+}
 
 .bg-lavender { background-color: var(--color-lavender); }
 .bg-light-lavender { background-color: var(--color-light-lavender); }

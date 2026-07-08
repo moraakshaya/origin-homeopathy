@@ -1,0 +1,519 @@
+/* Footer Base Settings */
+.footer {
+  background-color: var(--color-light-lavender);
+  position: relative;
+  margin-top: 220px;
+  padding-top: 80px;
+  font-family: var(--font-family-primary);
+  color: var(--color-text);
+}
+
+/* Floating CTA Banner */
+.footer-cta-container {
+  position: absolute;
+  top: -200px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 1.5rem;
+}
+
+.footer-cta {
+  width: 100%;
+  max-width: 1100px;
+  background-color: var(--color-light-lavender);
+  /* Match image background perfectly */
+  background-image: url('../images/footer/footerbg.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+  /* Shifted slightly up so it is not covered by buttons */
+  background-size: contain;
+  color: var(--color-navy);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  /* 3D Morphism / Neumorphism */
+  box-shadow:
+    -10px -10px 20px rgba(255, 255, 255, 0.8),
+    10px 10px 30px rgba(152, 97, 230, 0.15);
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #FAFAFA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  /* 3D Morphism */
+  box-shadow:
+    -5px -5px 15px rgba(255, 255, 255, 1),
+    5px 5px 15px rgba(152, 97, 230, 0.15);
+  border: 2px solid #ffffff;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.cta-main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 650px;
+  text-align: left;
+}
+
+.cta-main-content h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--color-navy);
+  line-height: 1.2;
+}
+
+.cta-bottom-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cta-bottom-row p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.footer-cta-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* =========================================
+   Footer CTA Scroll Animations
+   ========================================= */
+
+/* Pop up for entire container */
+.footer-cta {
+  opacity: 0;
+  transform: scale(0.9) translateY(40px);
+  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.footer-cta.in-view {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* Slide in from bottom for content elements */
+.cta-icon-wrapper,
+.cta-main-content h2,
+.cta-bottom-row p,
+.footer-cta-actions {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.cta-icon-wrapper.in-view,
+.cta-main-content h2.in-view,
+.cta-bottom-row p.in-view,
+.footer-cta-actions.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger Content */
+.cta-icon-wrapper.in-view {
+  transition-delay: 0.1s;
+}
+
+.cta-main-content h2.in-view {
+  transition-delay: 0.2s;
+}
+
+.cta-bottom-row p.in-view {
+  transition-delay: 0.3s;
+}
+
+.footer-cta-actions.in-view {
+  transition-delay: 0.4s;
+}
+
+.btn-solid-lavender {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  background-color: var(--color-lavender);
+  border: 2px solid var(--color-lavender);
+  border-radius: 50px;
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.btn-solid-lavender:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(152, 97, 230, 0.4);
+}
+
+.btn-outline-lavender {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  border: 2px solid var(--color-lavender);
+  background-color: var(--color-white);
+  border-radius: 50px;
+  color: var(--color-lavender);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-lavender:hover {
+  background-color: var(--color-lavender);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(152, 97, 230, 0.2);
+}
+
+/* Footer Main Grid */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 1rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+/* ===================================
+   Column 1: Brand
+   =================================== */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1.25rem;
+}
+
+.brand-tagline {
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.brand-desc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  max-width: 280px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-navy);
+  text-decoration: none;
+  font-size: 1.15rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(145deg, #ffffff, var(--color-light-navy));
+  box-shadow:
+    4px 4px 8px rgba(0, 0, 0, 0.08),
+    -4px -4px 8px #ffffff,
+    inset 0 -2px 5px rgba(0, 0, 0, 0.03),
+    inset 0 2px 5px rgba(255, 255, 255, 0.8);
+}
+
+.social-link i {
+  line-height: 1;
+  /* Fixes centering issue in icons */
+}
+
+.social-link:hover {
+  color: var(--color-lavender);
+  transform: translateY(-4px);
+  box-shadow:
+    6px 6px 12px rgba(0, 0, 0, 0.1),
+    -6px -6px 12px #ffffff,
+    inset 0 -2px 5px rgba(0, 0, 0, 0.03),
+    inset 0 2px 5px rgba(255, 255, 255, 0.8);
+}
+
+.social-link:active {
+  transform: translateY(0);
+  box-shadow:
+    inset 4px 4px 8px rgba(0, 0, 0, 0.08),
+    inset -4px -4px 8px #ffffff;
+}
+
+/* ===================================
+   Links Columns (2 & 3)
+   =================================== */
+.footer-heading {
+  color: var(--color-navy);
+  font-size: 1.125rem;
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+}
+
+.footer-col a {
+  display: flex;
+  align-items: center;
+  color: var(--color-text);
+  text-decoration: none;
+  margin-bottom: 0.875rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.footer-col a:hover {
+  color: var(--color-lavender);
+}
+
+/* Arrow Hover Animation for Links */
+.quick-links a .hover-arrow,
+.popular-treatments a .hover-arrow {
+  opacity: 0;
+  width: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  margin-right: 0;
+}
+
+.quick-links a:hover .hover-arrow,
+.popular-treatments a:hover .hover-arrow {
+  opacity: 1;
+  width: 1rem;
+  /* Space for the arrow */
+  transform: translateX(0);
+  margin-right: 0.5rem;
+}
+
+.view-all-link {
+  color: var(--color-lavender) !important;
+  font-weight: 600 !important;
+  margin-top: 1rem;
+}
+
+/* ===================================
+   Column 4: Contact Info
+   =================================== */
+.contact-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.contact-line i {
+  font-size: 1.1rem;
+  margin-top: 0.15rem;
+  /* Align icon with first line of text */
+}
+
+/* ===================================
+   Bottom Bar
+   =================================== */
+.footer-bottom {
+  background-color: transparent;
+  color: var(--color-text);
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  /* margin-top: 2rem; */
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.footer-bottom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.footer-bottom-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.footer-bottom-links a,
+.footer-bottom-links span {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: var(--color-lavender);
+}
+
+.divider {
+  opacity: 0.3;
+}
+
+.footer-bottom-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.made-with-care {
+  color: var(--color-text);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.scroll-top-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-lavender);
+  color: var(--color-white) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.scroll-top-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(152, 97, 230, 0.4);
+}
+
+
+/* =========================================
+   Responsive Breakpoints
+   ========================================= */
+
+/* Responsive Adjustments */
+@media screen and (min-width: 768px) {
+  .footer-cta {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    padding: 3rem 4rem;
+    gap: 2.5rem;
+  }
+
+  .cta-main-content {
+    max-width: 650px;
+    /* Constrains title width so it wraps without appearing on the image */
+  }
+
+  .cta-bottom-row {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .cta-bottom-row p {
+    flex: 1;
+    max-width: 320px;
+    /* Constrain paragraph width so it wraps beautifully */
+  }
+
+  .footer-cta-actions {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    /* Buttons render slightly down from the start point of paragraph */
+  }
+
+  .footer-cta h2 {
+    font-size: var(--fs-2xl);
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-bottom {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .footer-bottom-container {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .footer-bottom-right {
+    flex-direction: row;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .footer-content {
+    grid-template-columns: 2fr 1.25fr 1.25fr 1.5fr;
+    gap: 2rem;
+  }
+}
+
+/* Mobile Overrides for CTA Banner */
+@media screen and (max-width: 767px) {
+  .footer-cta {
+    /* Use a linear gradient overlay matching --color-light-lavender to reduce opacity */
+    background-image: linear-gradient(rgba(243, 232, 255, 0.3), rgba(243, 232, 255, 0.8)), url('../images/footer/footerbg.png');
+    background-position: center;
+    padding: 1.5rem 1rem;
+    /* Decreased height */
+  }
+
+  .cta-main-content {
+    text-align: center;
+  }
+
+  .footer-cta-container {
+    top: -298px;
+    padding: 0 0rem;
+  }
+}

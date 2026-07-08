@@ -1,7 +1,7 @@
 /* Color Palette Variables based on Branding */
 :root {
-  --color-lavender: #6C63FF;
-  --color-light-lavender: #EDE9FE;
+  --color-lavender: #9861E6; /* True Lavender/Purple */
+  --color-light-lavender: #F3E8FF; /* Light Lavender */
   --color-navy: #1A2A4D;
   --color-light-navy: #E6E9F6;
   --color-text: #333333;
@@ -9,8 +9,8 @@
   --color-background: #FAFAFA;
 
   /* Typography Variables */
-  --font-family-primary: 'Inter', sans-serif; /* Body Text */
-  --font-family-secondary: 'Lora', serif;   /* Headings & Logo */
+  --font-family-primary: 'Lora', serif; /* Body Text */
+  --font-family-secondary: 'Roboto Slab', serif;   /* Headings & Logo */
   
   /* Font Sizes - Mobile First (Base) */
   --fs-xs: 0.75rem;     /* 12px */
