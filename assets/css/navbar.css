@@ -1,5 +1,6 @@
 /* Navbar Base Styles */
 .navbar {
+  position: relative;
   background-color: var(--color-white);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   padding: 0.75rem 1rem;
@@ -72,7 +73,8 @@
 }
 
 /* Utility Display Classes */
-.tablet-desktop-only, .desktop-only {
+.tablet-desktop-only,
+.desktop-only {
   display: none !important;
 }
 
@@ -94,7 +96,8 @@
 
 .btn-whatsapp {
   font-size: 1.5rem;
-  color: #25D366; /* WhatsApp brand color */
+  color: #25D366;
+  /* WhatsApp brand color */
   transition: transform 0.3s ease;
 }
 
@@ -133,11 +136,12 @@
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  top: calc(100% + 0.75rem); /* Exactly bottom border of navbar */
+  top: calc(100% + 0.75rem);
+  /* Exactly bottom border of navbar */
   left: 0;
   background-color: var(--color-white);
   min-width: 200px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
   z-index: 1001;
@@ -165,7 +169,6 @@
   transform: translateY(0);
 }
 
-
 /* =========================================
    Mobile Drawer Styling
    ========================================= */
@@ -189,7 +192,7 @@
   width: 100%;
   max-height: calc(100vh - 60px);
   background-color: var(--color-white);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   transform: translateY(-15px);
   opacity: 0;
   visibility: hidden;
@@ -223,7 +226,8 @@
   padding: 1.25rem;
 }
 
-.drawer-links, .drawer-contact {
+.drawer-links,
+.drawer-contact {
   list-style: none;
 }
 
@@ -264,7 +268,8 @@
 }
 
 .mobile-dropdown.open .mobile-dropdown-content {
-  max-height: 400px; /* large enough to show items */
+  max-height: 400px;
+  /* large enough to show items */
 }
 
 .mobile-dropdown-toggle {
@@ -315,7 +320,7 @@
   .desktop-only {
     display: inline-flex !important;
   }
-  
+
   .menu-toggle {
     display: none;
   }

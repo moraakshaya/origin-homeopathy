@@ -22,12 +22,12 @@ window.initNavbar = function() {
 
   function openDrawer() {
     document.body.classList.add('drawer-active');
-    document.body.style.overflow = 'hidden';
+    // document.body.style.overflow = 'hidden';
   }
 
   function closeDrawer() {
     document.body.classList.remove('drawer-active');
-    document.body.style.overflow = '';
+    // document.body.style.overflow = '';
   }
 
   menuBtn.addEventListener('click', toggleDrawer);
